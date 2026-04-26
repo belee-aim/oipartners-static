@@ -1,0 +1,45 @@
+.justify{
+    text-align: justify !important;
+}
+
+.timeline-item-date{
+    margin-bottom: 5px !important;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 768px){
+    .mobile-none {
+        display: none;
+    }
+}
+@media (min-width: 768px){    
+    .desktop-none {
+        display: none;
+    }
+}
+/*
+     FILE ARCHIVED ON 23:07:22 Mar 14, 2025 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 11:16:32 Apr 25, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.46
+  exclusion.robots: 0.035
+  exclusion.robots.policy: 0.027
+  esindex: 0.006
+  cdx.remote: 43.23
+  LoadShardBlock: 154.938 (3)
+  PetaboxLoader3.datanode: 185.2 (4)
+  load_resource: 883.632
+  PetaboxLoader3.resolve: 822.774
+*/
+
+/* === Static rebuild patches === */
+img[src=""], img:not([src]) { display:none \!important; }
+img[src*="/storage/"] { background:#f0f0f0 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23bbb'><path d='M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zm-12.5-6L11 16l3.5-4.5L19 18H5l3.5-5z'/></svg>") center/24% no-repeat; min-height:60px; }
