@@ -43,3 +43,47 @@ playback timings (ms):
 /* === Static rebuild patches === */
 img[src=""], img:not([src]) { display:none \!important; }
 img[src*="/storage/"] { background:#f0f0f0 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23bbb'><path d='M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zm-12.5-6L11 16l3.5-4.5L19 18H5l3.5-5z'/></svg>") center/24% no-repeat; min-height:60px; }
+
+/* === Icon-font fallbacks (inspiro-icons.{ttf,woff} were never archived) === */
+i.icon-globe, i.icon-mail, i.icon-search, i.icon-x,
+i.icon-grid, i.icon-chevron-right, i.icon-chevron-up,
+i.icon-chevron-left, i.icon-chevron-down, i.icon-check,
+i.icon-arrow-right, i.icon-arrow-left, i.icon-menu {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+}
+i.icon-globe::before          { content: "\f0ac" !important; }
+i.icon-mail::before           { content: "\f0e0" !important; }
+i.icon-search::before         { content: "\f002" !important; }
+i.icon-x::before              { content: "\f00d" !important; }
+i.icon-grid::before           { content: "\f00a" !important; }
+i.icon-chevron-right::before  { content: "\f054" !important; }
+i.icon-chevron-up::before     { content: "\f077" !important; }
+i.icon-chevron-left::before   { content: "\f053" !important; }
+i.icon-chevron-down::before   { content: "\f078" !important; }
+i.icon-check::before          { content: "\f00c" !important; }
+i.icon-arrow-right::before    { content: "\f061" !important; }
+i.icon-arrow-left::before     { content: "\f060" !important; }
+i.icon-menu::before           { content: "\f0c9" !important; }
+
+/* === Hero slider: archived snapshot has empty <h1> and empty CTA, plus
+       the slide background image was never captured by Wayback. Hide the
+       lone outlined pill so the hero doesn't read as broken, and supply
+       a tasteful fallback backdrop using the brand mark. === */
+#slider .slide {
+    background-color: #0e0e0e;
+}
+#slider .slide[data-bg-image=""],
+#slider .slide:not([style*="background-image"]) {
+    background-image: radial-gradient(ellipse at center, #1a1a1a 0%, #000 70%),
+                      url("../storage/settings/May2023/LYnLzt2hTomo1IUZAUrx.png");
+    background-position: center, center;
+    background-size: cover, 220px 220px;
+    background-repeat: no-repeat, no-repeat;
+    background-blend-mode: normal, screen;
+}
+#slider .slide-captions h1:empty,
+#slider .slide-captions a.btn:empty,
+#slider .slide-captions a.btn[href=""]:not([href*="#"]) {
+    display: none !important;
+}
